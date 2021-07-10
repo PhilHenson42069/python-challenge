@@ -2,8 +2,8 @@ import os
 import csv
 
 # csvpath = os.path.join('..', 'Resources', 'accounting.csv')
-csvpath = "budget_data.csv"
-
+csvpath = "Resources/budget_data.csv"
+print
 total = 0
 monthstotal = 0
 average = 0
@@ -64,7 +64,7 @@ print(output)
 
 # Write to text file
 
-with open("budget_data.csv") as text:
+with open("pybank_result.txt", "w") as text:
     text.write ("Pybank")
     text.write ('-------------------------------------------------')
     text.write ("Total months: " + str(monthstotal))

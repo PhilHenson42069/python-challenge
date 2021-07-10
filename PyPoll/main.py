@@ -2,7 +2,7 @@ import os
 import csv
 
 # csvpath = os.path.join('..', 'Resources', 'accounting.csv')
-csvpath = "election_data.csv"
+csvpath = "Resources/election_data.csv"
 
 total = 0
 Khan_votes = 0
@@ -11,6 +11,7 @@ Li_votes = 0
 OTooley_votes = 0
 maxVotes = 0
 candidate = {}
+winner = 0
 
 with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
@@ -39,7 +40,7 @@ with open(csvpath) as csvfile:
     print(f"Correy= {Correy_votes}")
     print(f"Li= {Li_votes}")
     print(f"OTooley= {OTooley_votes}")
-    print(total)
+    print(f"Total Votes= {total}")
 
 # find the percentage of votes
     percentage = (Khan_votes/total)*100
@@ -51,3 +52,6 @@ with open(csvpath) as csvfile:
     print(f"Li%= {percentage2}")
     print(f"O'Tooley%= {percentage3}")
 # Winner of the election
+
+input =[Khan_votes,Correy_votes,Li_votes,OTooley_votes]
+# winner(input)
